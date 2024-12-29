@@ -1,0 +1,12 @@
+[Unit]
+Description=File Watcher Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/bado/bsm/file_watcher.py
+Restart=always
+User=bado
+WorkingDirectory=/home/bado/bsm
+
+[Install]
+WantedBy=multi-user.target
